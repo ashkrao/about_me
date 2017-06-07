@@ -25,6 +25,14 @@ if (answer === 'no' || answer === 'n') {
 } else {
   alert('Wrong!');
 }
+answer = prompt('Does Ashwini like sports?', 'type yes or no').toLowerCase();
+console.log(answer);
+if (answer === 'no' || answer === 'n') {
+  userScore++;
+  alert('You got that right!')
+} else {
+  alert('Wrong! try again');
+}
 answer = prompt('Does Ashwini like chocolate?', 'type yes or no').toLowerCase();
 console.log(answer);
 if (answer === 'yes' || answer === 'y') {
@@ -33,3 +41,12 @@ if (answer === 'yes' || answer === 'y') {
 } else {
   alert('Wrong!');
 }
+answer = prompt('Is Ashwini going to Ace code201? (You better say yes)', 'type yes or no').toLowerCase();
+console.log(answer);
+if (answer === 'yes' || answer === 'y') {
+  userScore++;
+  alert('You got that right!')
+} else {
+  alert('You are doomed!');
+}
+alert('Your total score is : ' + userScore);
