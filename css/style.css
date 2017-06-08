@@ -1,7 +1,12 @@
 * {
   font-family: sans-serif;
 }
-
+body {
+  background-color: #e6faff;
+}
 h1 {
-  color: blue;
+  color: #85a3e0;
+}
+h2 {
+  color: #4da6ff;
 }
