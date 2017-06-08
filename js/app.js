@@ -33,7 +33,7 @@ console.log('Got this answer: ' + answer);
 
 if (answer === 'yes' || answer === 'y') {
   userScore++;
-  alert('You betcha!');
+  alert('She sure can!');
   console.log('Correct answer!');
 } else {
   alert('Wrong! You need to see her code to believe it!');
@@ -83,16 +83,21 @@ var guesses = 4;
 var favNumber = 81;
 while(guesses > 0) {
   answer = prompt(q6 + ' You have ' + guesses + ' guesses.', 'enter a number');
+  console.log('Prompted: ' + q6);
+  console.log('Got this answer: ' + answer);
   if(answer == favNumber) {
     alert('Bingo!');
+    console.log('Correct answer!');
     userScore++;
     break;
   } else {
     guesses--;
     if(answer > favNumber) {
       alert('That\'s too high!');
+      console.log('Wrong answer!');
     } else {
       alert('That\'s too low!');
+      console.log('Wrong answer!');
     }
   }
 }
