@@ -13,6 +13,7 @@ var q3 = 'Does Ashwini like sports?';
 var q4 = 'Does Ashwini like chocolate?';
 var q5 = 'Is Ashwini going to Ace code201? (You better say yes)';
 var q6 = 'What is my favorite number?';
+var q7 = 'What is Ashwini\'s favorite snack?';
 
 var answer = prompt(q1, 'type yes or no').toLowerCase();
 console.log('Prompted: ' + q1);
@@ -102,4 +103,39 @@ while(guesses > 0) {
   }
 }
 
-alert('Your total score is : ' + userScore + ' out of 6, ' + user + '!');
+guesses = 6;
+var snacks = ['popcorn','muffin','chips','roasted almonds','cookies'];
+var message = '';
+while(guesses > 0){
+  answer = prompt(q7 + ' You have ' + guesses + ' guesses.').toLowerCase();
+  console.log(q7);
+  console.log(answer);
+  var answerFound = false; // Extra variable to break out of while loop later
+  for(var i = 0;i < snacks.length;i++){
+    if(answer == snacks[i].toLowerCase()){
+      answerFound = true;
+      message = 'Yay, you guessed right! ';
+      console.log('Correct answer! ' + answer + ' matched ' + snacks[i]);
+      userScore++;
+      break;
+    }
+  }
+
+  // Now check if we need to break out of while loop too
+  if(answerFound) {
+    break;
+  } else {
+    // No need to break out of while loop yet
+    guesses--;
+    console.log('Wrong answer!');
+  }
+}
+
+message = message + 'These are Ashwini\'s favorite snacks: ';
+for(i = 0;i < snacks.length;i++) {
+  message = message + '\n\n' + snacks[i];
+}
+
+alert(message);
+
+alert('Your total score is : ' + userScore + ' out of 7, ' + user + '!');
