@@ -82,7 +82,7 @@ if (answer === 'yes' || answer === 'y') {
 var guesses = 4;
 var favNumber = 81;
 while(guesses > 0) {
-  answer = prompt(q6 + ' You have ' + guesses + ' guesses.', 'enter a number');
+  answer = prompt('What is your favorite number?' + ' You have ' + guesses + ' guesses.', 'enter a number');
   console.log('Prompted: ' + q6);
   console.log('Got this answer: ' + answer);
   if(answer == favNumber) {
