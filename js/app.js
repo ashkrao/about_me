@@ -21,7 +21,7 @@ alert('Hi ' + user + '! Nice to meet you!');
 // console.log('Got this answer: ' + answer);
 function quest15(input) {
   var answer = prompt(questions[input]).toUpperCase();
-  if (answer === answers[input][0] ||answer === answers[input][1]) {
+  if (answer === answers[input][0] || answer === answers[input][1]) {
     alert('You betcha!');
     console.log('Correct answer!');
   } else {
@@ -91,28 +91,30 @@ function quest15(input) {
 //
 //
 function numberGuess() {
-var guesses = 4;
-var favNumber = 81;
-while (guesses > 0) {
-  answer = prompt(q6 + ' You have ' + guesses + ' guesses.', 'enter a number');
-  console.log('Prompted: ' + q6);
-  console.log('Got this answer: ' + answer);
-  if (answer == favNumber) {
-    alert('Bingo!');
-    console.log('Correct answer!');
-    userScore++;
-    break;
-  } else {
-    guesses--;
-    if (answer > favNumber) {
-      alert('That\'s too high!');
-      console.log('Wrong answer!');
+  var guesses = 4;
+  var favNumber = 81;
+  while (guesses > 0) {
+    answer = prompt(q6 + ' You have ' + guesses + ' guesses.', 'enter a number');
+    console.log('Prompted: ' + q6);
+    console.log('Got this answer: ' + answer);
+    if (answer == favNumber) {
+      alert('Bingo!');
+      console.log('Correct answer!');
+      userScore++;
+      break;
     } else {
-      alert('That\'s too low!');
-      console.log('Wrong answer!');
+      guesses--;
+      if (answer > favNumber) {
+        alert('That\'s too high!');
+        console.log('Wrong answer!');
+      } else {
+        alert('That\'s too low!');
+        console.log('Wrong answer!');
+      }
     }
   }
 }
+
 // };
 
 //
@@ -149,6 +151,8 @@ function guessGame() {
   for (var i = 0; i < 5; i++) {
     quest15(i);
   }
-}
+  numberGuess();
+};
+
 
 guessGame();
