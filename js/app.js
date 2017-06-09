@@ -94,8 +94,9 @@ function numberGuess() {
   var guesses = 4;
   var favNumber = 81;
   while (guesses > 0) {
-    answer = prompt(q6 + ' You have ' + guesses + ' guesses.', 'enter a number');
-    console.log('Prompted: ' + q6);
+var favNumber = 81;
+    var answer = prompt('what is Ashwini\'s Favorite number?' + ' You have ' + guesses + ' guesses.', 'enter a number');
+    console.log('Prompted: ' + 'what is Ashwini\'s Favorite number?');
     console.log('Got this answer: ' + answer);
     if (answer == favNumber) {
       alert('Bingo!');
