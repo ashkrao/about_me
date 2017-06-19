@@ -1,12 +1,5 @@
 'use strict';
 var userScore = 0;
-
-alert('Welcome to my guessing game!');
-
-var user = prompt('What is your name?');
-
-alert('Hi ' + user + '! Nice to meet you!');
-
 var q1 = 'Is Ashwini a good developer?';
 var q2 = 'Can Ashwini write clean code?';
 var q3 = 'Does Ashwini like sports?';
@@ -14,6 +7,13 @@ var q4 = 'Does Ashwini like chocolate?';
 var q5 = 'Is Ashwini going to Ace code201? (You better say yes)';
 var q6 = 'What is my favorite number?';
 var q7 = 'What is Ashwini\'s favorite snack?';
+var user;
+
+function askName() {
+  alert('Welcome to my guessing game!');
+  user = prompt('What is your name?');
+  alert('Hi ' + user + '! Nice to meet you!');
+}
 
 function question(q, a, cm, wm) {
   var answer = prompt (q, 'type yes or no').toLowerCase();
@@ -40,14 +40,6 @@ function question(q, a, cm, wm) {
     }
   }
 }
-
-question(q1, 'y', 'You betcha!', 'Wrong! go to the next question');
-question(q2, 'y', 'She sure can!', 'Wrong! You need to see her code to believe it!');
-question(q3, 'n', 'You got that right!', 'Wrong! try again');
-question(q4, 'y', 'You got that right!', 'Wrong!');
-question(q5, 'y', 'You got that right!', 'You are doomed!');
-
-
 
 function guessNum() {
   var guesses = 4;
@@ -110,6 +102,16 @@ function favSnack() {
   alert(message);
 }
 
+function showScore() {
+  alert('Your total score is : ' + userScore + ' out of 7, ' + user + '!');
+}
+
+askName();
+question(q1, 'y', 'You betcha!', 'Wrong! go to the next question');
+question(q2, 'y', 'She sure can!', 'Wrong! You need to see her code to believe it!');
+question(q3, 'n', 'You got that right!', 'Wrong! try again');
+question(q4, 'y', 'You got that right!', 'Wrong!');
+question(q5, 'y', 'You got that right!', 'You are doomed!');
 guessNum();
 favSnack();
-alert('Your total score is : ' + userScore + ' out of 7, ' + user + '!');
+showScore();
